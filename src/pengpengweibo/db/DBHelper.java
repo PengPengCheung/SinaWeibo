@@ -18,6 +18,11 @@ public class DBHelper extends SQLiteOpenHelper {
 		super(context, name, factory, version);
 		// TODO Auto-generated constructor stub
 	}
+	
+	//创建DBHelper上下文
+	public DBHelper(Context context){
+		this(context, DBInfo.DB.DB_NAME, null, DBInfo.DB.VERSION);
+	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {

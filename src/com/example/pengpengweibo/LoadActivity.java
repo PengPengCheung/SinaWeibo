@@ -1,5 +1,9 @@
 package com.example.pengpengweibo;
 
+import java.util.List;
+
+import pengpengweibo.dao.UserDao;
+import pengpengweibo.proj.User;
 import util.Tools;
 import android.media.audiofx.BassBoost.Settings;
 import android.net.ConnectivityManager;
@@ -73,6 +77,14 @@ public class LoadActivity extends Activity {
 	
 	public void init(){
 		Tools.checkNetwork(LoadActivity.this);
+		UserDao dao = new UserDao(this);
+		List<User> userList = dao.findAllUsers();
+		
+		if(userList == null || userList.isEmpty()){
+			Toast.makeText(this, "no data", Toast.LENGTH_SHORT).show();
+//			Intent intent = new Intent(this, "");
+		}
+		Toast.makeText(this, "test", Toast.LENGTH_SHORT).show();
 	}
 
 	@Override

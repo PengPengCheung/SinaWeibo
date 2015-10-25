@@ -25,12 +25,14 @@ public class DBInfo {
 				+ " integer primary key autoincrement, "
 				+ USER_ID
 				+ " text, "
+				+ USER_NAME
+				+" text, "
 				+ TOKEN
 				+ " text, "
 				+ TOKEN_SECRET
 				+ " text, "
 				+ DESCRIPTION
-				+ " text, " + USER_HEAD + " BLOG);";
+				+ " text, " + USER_HEAD + " BLOB);";
 		
 		public static final String DROP_USER_TABLE = "drop table "+USER_TABLE;//删除用户表语句
 	}
