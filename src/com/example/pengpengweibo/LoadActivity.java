@@ -82,7 +82,8 @@ public class LoadActivity extends Activity {
 		
 		if(userList == null || userList.isEmpty()){
 			Toast.makeText(this, "no data", Toast.LENGTH_SHORT).show();
-//			Intent intent = new Intent(this, "");
+			Intent intent = new Intent(this, OAuthActivity.class);
+			startActivity(intent);
 		}
 		Toast.makeText(this, "test", Toast.LENGTH_SHORT).show();
 	}

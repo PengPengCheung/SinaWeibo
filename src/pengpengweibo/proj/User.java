@@ -10,11 +10,18 @@ public class User {
 	private String token_secret;
 	private String description;
 	private Drawable user_head;
-	
-	public User(){
-		
+
+	public User() {
+
 	}
-	
+
+	public User(String user_id, String token, String token_secret) {
+		this.user_id = user_id;
+		this.token = token;
+		this.token_secret = token_secret;
+
+	}
+
 	public User(String user_id, String user_name, String token,
 			String token_secret, String description) {
 		this.user_id = user_id;
@@ -29,7 +36,7 @@ public class User {
 			String token_secret, String description, Drawable user_head) {
 		this(user_id, user_name, token, token_secret, description);
 		this.user_head = user_head;
-				
+
 	}
 
 	@Override
