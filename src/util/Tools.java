@@ -1,6 +1,7 @@
 package util;
 
-import com.example.pengpengweibo.LoadActivity;
+import pengpengweibo.proj.User;
+
 import com.example.pengpengweibo.R;
 
 import android.app.Activity;
@@ -13,7 +14,11 @@ import android.net.NetworkInfo;
 import android.widget.TextView;
 
 public class Tools {
-
+	
+	public User getUserInfo(User user){
+		return null;
+	}
+	
 	public static void checkNetwork(final Context context) {
 		if (!isNetworkAvailable(context)) {
 			TextView msg = new TextView(context);
